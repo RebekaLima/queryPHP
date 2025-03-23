@@ -13,6 +13,6 @@
                                 $db_name);
     }
     catch(mysqli_sql_exception) {
-        echo "Coul not connect! <br>";
+        echo "Could not connect! <br>";
     }
 ?>
