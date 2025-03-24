@@ -1,18 +1,20 @@
 <?php
 
     $db_server = "localhost";
-    $db_user = "root";
-    $db_pass = "";
-    $db_name = "db_quitanda";
-    $conn = "";
+    $db_username = "root";
+    $db_pass = "C0rdegelo@21";
+    $db_name = "db_lojagames";
+    $con = "";
 
     try{
-        $conn = mysqli_connect ($db_server,
-                                $db_user,
-                                $db_pass,
-                                $db_name);
+        $con = mysqli_connect(
+            $db_server,
+            $db_username,
+            $db_pass,
+            $db_name
+        );
+    } catch(mysqli_sql_exception) {
+        echo "Não foi possível conectar ao banco de dados!";
     }
-    catch(mysqli_sql_exception) {
-        echo "Coul not connect! <br>";
-    }
+
 ?>
