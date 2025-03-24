@@ -17,13 +17,12 @@
         <table id="userTable" border="1" class="table table-dark table-striped">
 
             <thead>
-                <tr class="table-light">
-                    <th>ID</th>
-                    <th>Categoria</th>
-                    <th>Descricao</th>
-                    <th>Genero</th>
+                <tr class="table-light text-center">
+                    <th>Id cliente</th>
                     <th>Nome</th>
-                    <th>Preco</th>
+                    <th>Idade</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
                 </tr>
             </thead>
             <tbody></tbody>
@@ -40,21 +39,18 @@
                 success: function(response){
                     var len = response.length;
                     for(var i=0;i<len;i++){
-                        var id = response[i].id;
-                        var categoria = response[i].categoria;
-                        var descricao = response[i].descricao;
-                        var genero = response[i].genero;
+                        var id_cliente = response[i].id_cliente;
                         var nome = response[i].nome;
-                        var preco = response[i].preco;
+                        var idade = response[i].idade;
+                        var endereco = response[i].endereco;
+                        var telefone = response[i].telefone;
 
                         var tr_str = "<tr>" +
                             "<td align = 'center'>" + (i+1) + "</td>" +
-                            "<td align = 'center'>" + categoria + "</td>" +
-                            "<td align = 'center'>" + descricao + "</td>" +
-                            "<td align = 'center'>" + genero + "</td>" +
                             "<td align = 'center'>" + nome + "</td>" +
-                            "<td align = 'center'>" + preco + "</td>"
-                            "</tr>";
+                            "<td align = 'center'>" + idade + "</td>" +
+                            "<td align = 'center'>" + endereco + "</td>" +
+                            "<td align = 'center'>" + telefone + "</td>" +                            "</tr>";
 
                         $('#userTable tbody').append(tr_str);
                     }

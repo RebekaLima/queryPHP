@@ -3,7 +3,7 @@
     $db_server = "localhost";
     $db_username = "root";
     $db_pass = "C0rdegelo@21";
-    $db_name = "db_lojagames";
+    $db_name = "clinica";
     $con = "";
 
     try{

@@ -2,26 +2,25 @@
 
 include("database.php");
 
-$query = "SELECT * FROM tb_produtos";
+$query = "SELECT * FROM clientes WHERE idade > 3
+ORDER BY idade ASC";
 $result = mysqli_query($con, $query);
 
 $data = array();
 
 while($row = mysqli_fetch_array($result)) {
-        $id = $row['id'];
-        $categoria = $row['categoria'];
-        $descricao = $row['descricao'];
-        $genero = $row['genero'];
+        $id_cliente = $row['id_cliente'];
         $nome = $row['nome'];
-        $preco = $row['preco'];
+        $idade = $row['idade'];
+        $endereco = $row['endereco'];
+        $telefone = $row['telefone'];
 
         $return_arr[] = array(
-            "id" => $id,
-            "categoria" => $categoria,
-            "descricao" => $descricao,
-            "genero" => $genero,
+            "id_cliente" => $id_cliente,
             "nome" => $nome,
-            "preco" => $preco,
+            "idade" => $idade,
+            "endereco" => $endereco,
+            "telefone" => $telefone,
         );
 }
 
