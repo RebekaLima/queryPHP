@@ -2,7 +2,7 @@
 
     $db_server = "localhost";
     $db_username = "root";
-    $db_pass = "C0rdegelo@21";
+    $db_pass = "";
     $db_name = "clinica";
     $con = "";
 
