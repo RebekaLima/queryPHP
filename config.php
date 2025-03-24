@@ -2,8 +2,8 @@
 
 include("database.php");
 
-$query = "SELECT * FROM clientes WHERE idade > 3
-ORDER BY idade ASC";
+$query = "SELECT * FROM clientes WHERE idade > 30
+ORDER BY idade DESC";
 $result = mysqli_query($con, $query);
 
 $data = array();
